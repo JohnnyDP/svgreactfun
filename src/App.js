@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Problem } from './comps/Problem';
+import { Factor } from './comps/Factor';
 
-function App() {
+const factors = [
+  {name: "test1"},
+  {name: "test2"},
+  {name: "test3"},
+]
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{height:1000, width:1000}}>
+      <svg style={{height:1000, width:1000}}>
+      <line x1={"50%"} y1={"50%"} x2={200} y2={200} stroke="black"></line>
+        <Problem x={"50%"} y={"50%"} />
+        <Factor x={200} y={200} />
+        <Factor x={300} y={200} />
+        <Factor x={200} y={700} />
+      </svg>
     </div>
   );
 }
